@@ -1,0 +1,112 @@
+html {
+    font-size: 20px;
+}
+.site-header {
+    height: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    " L M ";
+}
+
+.site-navigation {
+    display: block;
+    justify-self: end;
+}
+
+.menu {
+    flex-direction: row;
+    position: relative;
+}
+.active .submenu {
+    display: none;
+}
+
+.toggle-btn {
+    display: none;
+}
+
+/*.menu-item:hover > .submenu {
+    display: block;
+}*/
+
+.brand img {
+    width: 350px;
+}
+/*.submenu {
+    position: absolute;
+    left: 0;
+    display: none;
+}*/
+
+
+/** KONTAKT **/
+
+/** INDEX **/
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    padding-right: 1em;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    padding: 1em;
+
+    
+}
+
+.card {
+    width: calc(33% - 2em);
+
+}
+/** om oss**/
+.hero.about {
+    min-height: 80vh;
+    background-position: top center;
+}
+.image-content {
+    flex-direction: row;
+    padding: 2em 1em;
+    max-width: 1200px;
+    margin: auto;
+    border-bottom: 1px solid #000;
+}
+
+.image-content .image {
+    margin-right: 2em;
+}
+.image-content:nth-last-of-type(2n) .image {
+    margin-left: 2em;
+    margin-right: 0;
+    order: 2;
+}
+.image-content:nth-last-of-type(odd) {
+    background-color: #eee;
+}
+.image-content .content {
+    padding: 0;
+    border: 0;
+}
+
+.content .content {
+    display: flex;
+    flex-direction: row;
+    margin: 2em;
+    justify-content: center;
+    max-width: 800px;
+}
+/** TJÄNSTER **/
+.description.img {
+    width: 400px;
+    height: 400px;
+}
+/** SITE FOOTER **/
+.site-footer .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+

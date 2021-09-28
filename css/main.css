@@ -1,0 +1,461 @@
+/* FONDATION */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/* BASE */
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: karla;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: spectral;
+    line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+p,
+img {
+    margin-bottom: .5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    /* max-width: 100%; fyller ut bilder till 100% av ytan*/
+    height: auto;
+}
+
+/** SITE HEADER **/
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    display: grid;
+    grid-template-columns: 1fr 3rem;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+        " L B "
+        " M M "
+    ;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgb(245, 242, 238);
+}
+/** BRAND **/
+.brand {
+    grid-area: L;
+}
+.brand img {
+    object-fit: cover;
+    object-position: left;
+    height: 100%;  
+    width: 60%;
+}
+.brand-link {
+    display: block;
+    height: 80px;
+
+    color: #000000;
+    text-decoration: none;
+    font-size: 2rem;
+}
+/** SITE NAVIGATION **/
+.site-navigation {
+    grid-area: M;
+    display: none;
+}
+/* TOGGLE BUTTON */
+.toggle-btn {
+    grid-area: B;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+    padding: 0 .5rem;
+    background-color: rgb(156, 134, 104);
+    cursor: pointer;
+}
+.toggle-btn .bars,
+.toggle-btn .bars::before,
+.toggle-btn .bars::after {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+.toggle-btn .bars::before,
+.toggle-btn .bars::after {
+    content: '';
+}
+.toggle-btn .bars::before {
+    position: relative;
+    top: -10px;
+}
+.toggle-btn .bars::after {
+    position: relative;
+    top: 8px;
+}
+.toggle-menu {
+    display: none;
+
+}
+/* CHECKBOX */
+.toggle-menu:checked + .site-navigation {
+    display: block;
+}
+
+/** MENU **/
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+.menu-item{}
+
+.menu-item > a {
+    display: block;
+    text-decoration: none;
+    padding: .5rem 1.5rem;
+    color:rgb(156, 134, 104);
+    /*background-color: rgb(156, 134, 104);'/'
+    margin: .5rem;
+}
+
+/*.submenu {
+    display: none;
+}
+.active .submenu {
+    display: flex;
+    flex-direction: column;
+}
+.submenu a {
+    text-decoration: none;
+    padding: .5rem 1.5em
+    color: white;
+    background-color: rgb(156, 118, 68);
+    margin: .5rem;*/
+}
+.menu-item.active a {
+    background-color: rgb(165, 118, 165);
+    color: white;
+}
+.menu-item a:hover {
+    color:rgb(245, 242, 238);
+    background-color: rgb(189, 169, 142);
+}
+/*** SITE FOOTER ***/
+.site-footer {
+    background-color: rgb(156, 134, 104);
+    color: white;
+    padding: 3rem 1rem;
+}
+
+.site-footer a {
+    color: #fff;
+}
+
+.site-footer .grid-container {
+    display: grid;
+    gap: 1em;
+}
+.social-links {
+    display: flex;
+    margin-left: -1em;
+}
+.social-links a {
+    padding: 1em;
+    text-decoration: none;
+}
+.social-links i {
+    margin-right: .5em;
+}
+
+/** KONTAKT **/
+/* FORMULÄR */
+
+.contact-cta {
+    padding: 3em 1em;
+    background-color: #eee;
+    display: flex;   
+    flex-direction: column;
+    align-items: center;
+}
+    
+.contact-cta form {
+    max-width: 1000px;
+    margin: auto;
+    
+}
+input,
+textarea,
+button {
+    display: inline-block;
+    padding: .5em 1em;
+    font-size: 1rem;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+textarea {
+    height: 300px;
+}
+
+input[type="submit"] {
+    /*background-color:rgb(156, 134, 104);*/
+    background-color: rgb(165, 118, 165);
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/** GOOGLE MAP**/
+.google-map {
+    width: 100%;
+    height: 40vh;
+}
+
+.contact-info {
+    padding: 3em 1em;
+}        
+.contact-info .container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    gap: 1em;
+}
+
+.hero.contact {
+    background-image: url(../images/milieu.png);
+    background-position: center;
+    background-size: cover;
+    min-height: 70vh;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.contact-info .container .image {
+    width: 100%;
+    height: auto;
+
+}
+
+/** STARTSIDA **/
+/** HERO **/
+.hero {
+    
+    position: relative;
+    height: 50vh;
+    height: 400px;
+    padding: 0; 
+    
+    background-color: rgb(189, 169, 142);
+    background-position: center;
+    background-repeat: no repeat;
+    background-size: cover;
+    background-image: url(../images/hem.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero.front-page {}
+ .hero .overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    margin-bottom: 1em;
+    
+ } 
+.hero .container {
+    position: relative;
+    padding: 2rem;
+    max-width: 800px;
+    text-align: center;
+    
+    color: white;
+   
+}
+.content-content .post h1 {
+    align-content: center;
+}
+.hero-ct {
+    display: inline-block;
+    background-color: thistle;
+    color: black;
+    padding: .3em 1em;
+    text-decoration: none;
+    font-size: 20px;    
+}
+
+.hero-title {}
+
+.tjänster h1 {
+    text-align: center;
+}
+.flex-container {
+    flex-wrap: wrap;
+    background: white;
+    margin-bottom: 2em;
+}
+
+.card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #eee;
+    padding: 1em;
+    margin: .5em;
+}
+
+.card a {
+    display: block;
+    text-decoration: none;
+    padding: 0em .5em 0 .5em;
+    justify-content: center;
+    color: black;
+}
+.card-item > a {
+    display: block;
+    text-decoration: none;  
+    color: white;
+    background-color: rgb(138, 69, 117);  
+}
+.tjänster h2 {
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: 0em;
+}
+.content .post {
+    margin: 1em 2em;
+    padding: 1em;
+}
+.content .post-title {
+    text-align: center;
+}
+
+/** OM OSS **/
+.hero.about {
+    background-image: url(../images/omoss\ stor2.png);
+    background-position-x: center;
+    background-size: cover;
+    min-height: 70vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 1em;
+    
+}
+.image-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0em;
+
+}
+/*.image-content > .hero.about {
+    padding-top: .5em;
+}*/
+
+.image-content .content {
+    padding-top: 0em;
+    margin-top: 0em;
+}
+
+.image-content:last-of-type .content {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+.image-content img {
+    margin: 1em;
+}
+
+
+/** TJÄNSTER **/
+.features .description {
+    margin: 1em;
+}
+.features .stycke {
+    padding: 1em;
+    margin: 1em 0em;
+    background-color: rgb(241, 237, 237);
+}
+.product-flex {
+    background-color: rgb(245, 240, 240);
+    margin: 1em;
+}
+.product-flex .product {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 1em;   
+}
+
+.product .product-body {
+    padding-bottom: 2em;
+    margin: 0 3em 0 3em;
+    border-bottom: 1PX solid black;
+}
+   
+.product:last-of-type .product-body {
+    padding: 1em;
+    border: none;
+}
+/*.product:nth-last-of-type(2n) .product-body {
+    order: 2;*/
+    
+.product .product-link {
+    display: inline-block;
+    padding: .5em 1.5em;
+    text-decoration: underline;
+    background-color: rgb(165, 118, 165);
+    font-weight: 700;
+    color: white;
+}
+/*.image-content:nth-last-of-type(2n) .image {
+    margin-left: 2em;
+    margin-right: 0;
+    order: 2;*/

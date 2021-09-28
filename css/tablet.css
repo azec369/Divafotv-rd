@@ -1,0 +1,33 @@
+html {
+    font-size: 18px;
+}
+
+/* MENU */
+
+/** HEM **/
+
+.flex-container {}
+
+/* KONTAKT */
+.contact-info .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+}
+
+.site-footer .grid-container {
+    grid-template-columns: 1fr 1fr;
+}
+.socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.social-links {
+    flex-direction: column;
+}
+
+
+.site-footer .grid-container {
+    grid-template-columns: 1fr 1fr;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LABB</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" media="(min-width:768px)" href="./css/tablet.css">
+    <link rel="stylesheet" media="(min-width:992px)" href="./css/laptop.css">
+    <link rel="stylesheet" media="(min-width:1200px)" href="./css/desktop.css">
+</head>
+
+<body>
+
+    <div class="site">
+
+        <!-- Sidhuvud -->
+        <header class="site-header">
+            <div class="brand">
+                <a class="brand-link" href="index.html"><img src="./images/logo.png" alt=""></a>
+            </div>
+            <input type="checkbox" id="toggle-menu" class="toggle-menu">
+            <nav class="site-navigation">
+                <ul class="menu">
+                    <li class="menu-item"> 
+                        <a href="tjänster.html">Behandlingar</a>
+                        <!-- <ul class="submenu">
+                            <li><a href="#">Objekt 1</a></li>
+                            <li><a href="#">Objekt 2</a></li>
+                            <li><a href="#">Objekt 3</a></li>
+                        </ul> -->
+                    </li> 
+                    <li class="menu-item"> 
+                        <a href="om-oss.html">Om oss</a>
+                    </li> 
+                    <li class=" active menu-item"> 
+                        <a href="kontakt.html">kontakt</a>
+                    </li>
+                </ul>   
+            </nav>
+            <label class="toggle-btn" for="toggle-menu">
+                <span class="bars"></span>
+            </label>
+        </header> 
+        
+         <!-- Sidkropp -->
+
+        <main class="site-main">
+            <section class="hero contact">
+            </section>
+
+            <section class="contact-cta">
+                <h2>Tveka inte att kontakta oss!</h2>
+                    
+                <form action="mailto:hej@exemple.com" method="POST">
+                    <label for="name">Ditt namn</label>
+                    <input id="name" required name="namn" type="text">
+                    <label>E-postadress</label>
+                    <input id="e-postadress" type="email">
+                    <label>Ditt meddelande</label>
+                    <textarea name="meddelande"></textarea>                        
+                    <input value="Skicka" type="submit">
+                </form>
+            </section>
+
+            <section class="contact-info">
+                <div class="container">
+                    <div class="image">
+                        <img src="./images/adress1.png"alt="kontakta oss">
+                    </div>
+            
+                    <div class="adress">
+                        <h2>Divafotvård</h2>
+                        <P>Fabriksgatan 12<br>
+                        501 80 Borås</P>
+                        <p><i class="fas fa-phone"></i><a href="tel:+46334609460">+46 0334 60 93 60</a></p>
+                        <p><i class="fas fa-envelope"></i><a href="mailto:info@divafotvard.se">info@divafotvard.se</a></p>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="map">
+                <iframe 
+                    class="google-map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2130.9579767033456!2d12.940314415224293!3d57.71717154625722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e9afefc86cabdf%3A0x115095e0e11a6149!2zS29tdnV4IEJqw7Zya8Okbmc!5e0!3m2!1sfr!2sse!4v1610669009012!5m2!1sfr!2sse" 
+                    width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>                     
+            </section>
+
+        </main>
+
+        <!-- Sidfot -->
+        <footer class="site-footer">
+            <div class="container grid-container">
+                <div class="contact">
+                    <h3>Divafotvård</h3>
+                    <p>Fabriksgatan 12<br>
+                    501 80 Borås</p>
+                </div>
+                <div class="socials">
+                    <ul class="social-links">
+                        <li><a href="https://facebook.com"><i class="fab fa-fw fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="https://instagram.com"><i class="fab fa-fw fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://linkedin.com"><i class="fab fa-fw fa-linkedin-in"></i> LinkedIn</a></li>
+                    </ul>                
+                </div>
+    
+            </div>
+        </footer>
+    </div>
+    
+</body>
+</html>
